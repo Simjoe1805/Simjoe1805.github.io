@@ -1,2 +1,2 @@
-# Simjoe1805.github.io-
+# Simjoe1805.github.io
 my personal website 
