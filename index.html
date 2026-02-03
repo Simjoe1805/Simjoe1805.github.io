@@ -1,1 +1,381 @@
-Hi 
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Johannes | Golf • Watches • Volleyball</title>
+  <style>
+    :root{
+      --bg:#0b1220;
+      --panel:#111a2e;
+      --panel2:#0f172a;
+      --text:#e7eefc;
+      --muted:#a9b7d3;
+      --line:rgba(231,238,252,.12);
+      --accent:#7dd3fc;
+      --accent2:#a78bfa;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 700px at 20% 10%, rgba(125,211,252,.18), transparent 60%),
+                  radial-gradient(900px 600px at 80% 0%, rgba(167,139,250,.16), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit}
+    .wrap{max-width:1100px;margin:0 auto;padding:28px 18px 70px}
+    header{
+      border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(17,26,46,.9), rgba(15,23,42,.7));
+      border-radius:18px;
+      padding:22px 22px 18px;
+      overflow:hidden;
+      position:relative;
+    }
+    header:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: radial-gradient(700px 200px at 20% 0%, rgba(125,211,252,.18), transparent 60%),
+                  radial-gradient(600px 200px at 80% 0%, rgba(167,139,250,.15), transparent 60%);
+      pointer-events:none;
+      filter:blur(0px);
+    }
+    .topline{
+      position:relative;
+      display:flex; gap:14px; flex-wrap:wrap; align-items:center; justify-content:space-between;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+    }
+    .logo{
+      width:44px;height:44px;border-radius:12px;
+      border:1px solid var(--line);
+      display:grid;place-items:center;
+      background: rgba(255,255,255,.02);
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+      font-weight:700;
+      letter-spacing:.5px;
+    }
+    h1{margin:0;font-size:28px;letter-spacing:.2px}
+    .tag{
+      position:relative;
+      margin:10px 0 0;
+      color:var(--muted);
+      max-width:70ch;
+    }
+    nav{
+      position:relative;
+      display:flex; gap:10px; flex-wrap:wrap;
+    }
+    .pill{
+      text-decoration:none;
+      border:1px solid var(--line);
+      padding:8px 10px;
+      border-radius:999px;
+      background: rgba(255,255,255,.03);
+      font-size:14px;
+      color:var(--muted);
+    }
+    .pill:hover{border-color:rgba(125,211,252,.45); color:var(--text)}
+    .grid{
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap:16px;
+      margin-top:16px;
+    }
+    @media (max-width: 900px){
+      .grid{grid-template-columns:1fr}
+    }
+    section.card{
+      border:1px solid var(--line);
+      background: rgba(17,26,46,.65);
+      border-radius:18px;
+      padding:18px;
+      box-shadow: 0 18px 55px rgba(0,0,0,.25);
+    }
+    section.card h2{
+      margin:0 0 10px;
+      font-size:18px;
+      letter-spacing:.2px;
+    }
+    .sub{
+      margin:0 0 14px;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .cards{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:12px;
+    }
+    @media (max-width: 900px){
+      .cards{grid-template-columns:1fr}
+    }
+    .mini{
+      border:1px solid var(--line);
+      background: rgba(15,23,42,.6);
+      border-radius:16px;
+      padding:14px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      min-height: 170px;
+    }
+    .mini h3{margin:0;font-size:16px}
+    .mini p{margin:0;color:var(--muted);font-size:14px}
+    .badgeRow{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}
+    .badge{
+      font-size:12px;
+      padding:6px 9px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      color:var(--muted);
+      background: rgba(255,255,255,.03);
+    }
+    .accent{border-color:rgba(125,211,252,.35); color:rgba(125,211,252,.95)}
+    .accent2{border-color:rgba(167,139,250,.35); color:rgba(167,139,250,.95)}
+    .divider{
+      height:1px;
+      background: var(--line);
+      margin:12px 0;
+    }
+    .gallery{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:12px;
+    }
+    @media (max-width: 900px){
+      .gallery{grid-template-columns:1fr}
+    }
+    .tile{
+      border:1px solid var(--line);
+      background: rgba(15,23,42,.6);
+      border-radius:16px;
+      padding:14px;
+      display:flex; flex-direction:column; gap:10px;
+    }
+    .imgph{
+      width:100%;
+      aspect-ratio: 16/10;
+      border-radius:14px;
+      border:1px dashed rgba(231,238,252,.18);
+      display:grid; place-items:center;
+      color:rgba(231,238,252,.55);
+      background: rgba(255,255,255,.02);
+      font-size:13px;
+      text-align:center;
+      padding:10px;
+    }
+    .cta{
+      display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;
+    }
+    .btn{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      color:var(--text);
+      padding:10px 12px;
+      border-radius:12px;
+      text-decoration:none;
+      font-size:14px;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+    }
+    .btn:hover{border-color:rgba(125,211,252,.5)}
+    footer{
+      margin-top:18px;
+      color:rgba(169,183,211,.8);
+      font-size:13px;
+      text-align:center;
+    }
+    .kicker{
+      font-size:12px;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      color:rgba(125,211,252,.9);
+      margin:0 0 6px;
+    }
+    ul{margin:10px 0 0; padding-left:18px; color:var(--muted)}
+    li{margin:6px 0}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="topline">
+        <div class="brand">
+          <div class="logo">J</div>
+          <div>
+            <div class="kicker">Personal Snapshot</div>
+            <h1>Johannes</h1>
+          </div>
+        </div>
+        <nav>
+          <a class="pill" href="#golf">Golf</a>
+          <a class="pill" href="#watches">Watches</a>
+          <a class="pill" href="#volleyball">Volleyball</a>
+        </nav>
+      </div>
+      <p class="tag">
+        A simple site about what I love: <strong>golf</strong> (precision under pressure),
+        <strong>watches</strong> (engineering + taste), and <strong>volleyball</strong> (team rhythm and explosiveness).
+      </p>
+      <div class="cta">
+        <a class="btn" href="#golf">🏌️ Explore Golf</a>
+        <a class="btn" href="#watches">⌚ Explore Watches</a>
+        <a class="btn" href="#volleyball">🏐 Explore Volleyball</a>
+      </div>
+    </header>
+
+    <div class="grid">
+      <!-- Left column -->
+      <section class="card" id="golf">
+        <h2>Golf: focus, control, and clutch moments</h2>
+        <p class="sub">
+          What I admire most in golf is how it rewards discipline. Every shot is a small test of patience, decision-making,
+          and confidence. These three golfers represent different kinds of greatness.
+        </p>
+
+        <div class="cards">
+          <article class="mini">
+            <h3>Tiger Woods</h3>
+            <p>
+              The standard for mental toughness and shot-making. Tiger’s edge was never just talent—it was his ability to
+              apply pressure and still execute. He turned momentum into inevitability.
+            </p>
+            <div class="badgeRow">
+              <span class="badge accent">Clutch under pressure</span>
+              <span class="badge">Mental game</span>
+              <span class="badge">Relentless competitor</span>
+            </div>
+          </article>
+
+          <article class="mini">
+            <h3>Rory McIlroy</h3>
+            <p>
+              A modern blend of power and finesse. Rory’s game is a reminder that athleticism matters—speed, timing,
+              and smooth mechanics can create both distance and consistency.
+            </p>
+            <div class="badgeRow">
+              <span class="badge accent">Elite driving</span>
+              <span class="badge">Tempo</span>
+              <span class="badge">Complete skill set</span>
+            </div>
+          </article>
+
+          <article class="mini">
+            <h3>John Daly</h3>
+            <p>
+              The ultimate “raw talent” icon. Daly represents fearlessness and individuality—when he’s on, it’s pure
+              entertainment. He’s proof golf has room for personality.
+            </p>
+            <div class="badgeRow">
+              <span class="badge accent2">Power & swagger</span>
+              <span class="badge">Unpredictable</span>
+              <span class="badge">Fan favorite</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="divider"></div>
+
+        <p class="sub" style="margin:0;">
+          <strong>My takeaway:</strong> Tiger = mindset, Rory = modern athletic golf, Daly = bold confidence.
+        </p>
+      </section>
+
+      <!-- Right column -->
+      <section class="card" id="volleyball">
+        <h2>Volleyball: timing, teamwork, and intensity</h2>
+        <p class="sub">
+          Volleyball is fast and honest—every point exposes communication, positioning, and execution.
+          I love the mix of strategy and explosiveness.
+        </p>
+
+        <ul>
+          <li><strong>What I enjoy:</strong> quick reads, clean touches, and building momentum as a team.</li>
+          <li><strong>My mindset:</strong> stay calm, call the ball early, and make the simple play consistently.</li>
+          <li><strong>Why it fits me:</strong> it rewards effort, reaction speed, and leadership under pressure.</li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <p class="sub" style="margin:0;">
+          If golf is my solo discipline, volleyball is my team energy.
+        </p>
+      </section>
+    </div>
+
+    <section class="card" id="watches" style="margin-top:16px;">
+      <h2>Watches: engineering you can wear</h2>
+      <p class="sub">
+        I’m drawn to watches that feel like mechanical art—where design, finishing, and heritage meet.
+        Here are three I love.
+      </p>
+
+      <div class="gallery">
+        <article class="tile">
+          <div class="imgph">Add image here (optional):<br><strong>AP Skeleton</strong></div>
+          <h3>Audemars Piguet Skeleton</h3>
+          <p>
+            Skeleton pieces are about transparency—literally. I love seeing the movement and the craftsmanship that
+            most watches hide. It’s pure “watchmaking on display.”
+          </p>
+          <div class="badgeRow">
+            <span class="badge">Openworked</span>
+            <span class="badge accent2">Craftsmanship</span>
+            <span class="badge">Statement piece</span>
+          </div>
+        </article>
+
+        <article class="tile">
+          <div class="imgph">Add image here (optional):<br><strong>Rolex Daytona “John Mayer”</strong></div>
+          <h3>Rolex Daytona “John Mayer”</h3>
+          <p>
+            Icon status with undeniable presence. The dial color, the hype, and the history around the Daytona make it
+            feel like a watch-world legend.
+          </p>
+          <div class="badgeRow">
+            <span class="badge">Iconic</span>
+            <span class="badge accent">Collector favorite</span>
+            <span class="badge">Timeless</span>
+          </div>
+        </article>
+
+        <article class="tile">
+          <div class="imgph">Add image here (optional):<br><strong>Patek Philippe 5712R</strong></div>
+          <h3>Patek Philippe 5712R</h3>
+          <p>
+            Elegant and complex. The layout feels artistic, and the rose gold adds warmth. It’s the kind of watch that
+            looks understated—until you really pay attention.
+          </p>
+          <div class="badgeRow">
+            <span class="badge">High horology</span>
+            <span class="badge accent2">Rose gold</span>
+            <span class="badge">Refined</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="divider"></div>
+
+      <p class="sub" style="margin:0;">
+        <strong>My style:</strong> minimal, sharp, and engineered—whether it’s a swing, a serve, or a timepiece.
+      </p>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Johannes • Built with simple HTML & CSS
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
