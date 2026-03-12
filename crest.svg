@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">Johannes W. Simanjuntak Crest</title>
+  <desc id="desc">A shield crest featuring the initials JWS.</desc>
+  <defs>
+    <linearGradient id="shieldFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5efe6"/>
+      <stop offset="100%" stop-color="#e4d7c8"/>
+    </linearGradient>
+    <linearGradient id="ringFill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#bca891"/>
+      <stop offset="100%" stop-color="#8f7760"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="120" cy="120" r="108" fill="#f7f1e8"/>
+  <circle cx="120" cy="120" r="104" fill="none" stroke="url(#ringFill)" stroke-width="5"/>
+
+  <path d="M120 42 L188 66 L182 137 C176 174 152 202 120 216 C88 202 64 174 58 137 L52 66 Z"
+        fill="url(#shieldFill)"
+        stroke="#8f7760"
+        stroke-width="4"/>
+
+  <path d="M120 54 L176 74 L171 136 C166 165 146 189 120 202 C94 189 74 165 69 136 L64 74 Z"
+        fill="none"
+        stroke="#b39f89"
+        stroke-width="2.8"/>
+
+  <path d="M92 110 C87 98 77 90 66 86 M148 110 C153 98 163 90 174 86"
+        fill="none"
+        stroke="#8f7760"
+        stroke-width="4"
+        stroke-linecap="round"/>
+
+  <text x="120" y="137"
+        text-anchor="middle"
+        font-family="'Spectral', Georgia, serif"
+        font-size="52"
+        font-weight="700"
+        fill="#2f2a26">JWS</text>
+
+  <circle cx="120" cy="94" r="4.5" fill="#8f7760"/>
+</svg>
