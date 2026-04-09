@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Portrait placeholder for Johannes W. Simanjuntak</title>
+  <desc id="desc">A stylized portrait placeholder featuring the initials JWS.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f3e2cf" />
+      <stop offset="50%" stop-color="#d8b48d" />
+      <stop offset="100%" stop-color="#8d6544" />
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#fff8ef" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#fff8ef" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)" />
+  <circle cx="420" cy="260" r="260" fill="url(#glow)" />
+  <g opacity="0.18" stroke="#fff7ed" stroke-width="16" fill="none">
+    <path d="M82 130c112-54 242-62 356-8s210 168 288 284" />
+    <path d="M40 802c114-100 266-156 426-134s236 78 306 132" />
+  </g>
+  <g fill="#f7ecdf" opacity="0.92">
+    <circle cx="400" cy="352" r="124" />
+    <path d="M200 784c28-124 122-216 200-216s172 92 200 216H200z" />
+  </g>
+  <g fill="#704d31">
+    <circle cx="400" cy="332" r="120" />
+    <path d="M182 786c20-140 112-250 218-250s198 110 218 250H182z" />
+  </g>
+  <g fill="#f8f1e8">
+    <circle cx="400" cy="364" r="90" />
+    <path d="M256 782c24-108 88-178 144-178s120 70 144 178H256z" />
+  </g>
+  <g fill="#f4eadf" opacity="0.9">
+    <rect x="98" y="754" width="604" height="150" rx="24" />
+  </g>
+  <text x="124" y="826" fill="#5d3f28" font-family="Merriweather, Georgia, serif" font-size="96" font-weight="700" letter-spacing="4">JWS</text>
+  <text x="126" y="872" fill="#7b5838" font-family="Public Sans, Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="3">OPERATIONS  LEADERSHIP  STRATEGY</text>
+</svg>
