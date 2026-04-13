@@ -1,41 +1,80 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Babson College | Johannes W. Simanjuntak</title>
-  <meta name="description" content="A dedicated description page for Babson College." />
+  <title>Babson College — Education | Johannes W. Simanjuntak</title>
+  <meta name="description" content="Johannes W. Simanjuntak's education at Babson College." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <main class="page">
-    <a class="back-link" href="index.html">&larr; Back to Main Profile</a>
+<body style="background: var(--bg);">
 
-    <section class="section-block">
-      <p class="kicker">Education Focus</p>
+  <nav class="nav scrolled" id="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html" style="color: var(--ink);">
+        <img class="nav-crest" src="crest.svg" alt="JWS" style="border-color: var(--border-dark);" />
+        <span class="nav-name">Johannes W. Simanjuntak</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html#experience" style="color: var(--ink-soft);">Experience</a>
+        <a href="index.html#education" style="color: var(--ink-soft);">Education</a>
+        <a class="nav-btn" href="https://www.linkedin.com/in/johannes-william-simanjuntak" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="detail-page">
+    <a class="back-link" href="index.html">← Back to Profile</a>
+
+    <div class="detail-card">
+      <div class="kicker">Education</div>
       <h1>Babson College</h1>
+      <div class="detail-role-title">Wellesley, Massachusetts &nbsp;·&nbsp; Business & Entrepreneurship</div>
+
+      <hr class="detail-divider" />
+
       <p>
-        Babson College is a private business-focused college in Wellesley, Massachusetts, widely known for its
-        entrepreneurship-centered learning model. Its academic culture emphasizes practical problem-solving,
-        leadership development, and creating real-world impact through business.
+        Babson College is a private business college in Wellesley, Massachusetts, consistently
+        ranked #1 in the world for entrepreneurship education. Its model is built on the belief
+        that entrepreneurial thinking — opportunity recognition, disciplined execution, and
+        adaptive leadership — is the most valuable skill set in any environment.
       </p>
       <p>
-        The college is recognized for combining management fundamentals with innovation and venture-building thinking.
-        Students are trained to identify opportunities, execute with discipline, and lead in changing markets.
+        The academic experience at Babson combines rigorous management fundamentals with hands-on
+        venture creation. Students don't just study business in theory; they apply it in practice,
+        building ventures, managing teams, and navigating real market challenges from the start.
       </p>
       <p>
-        This environment aligns well with operational leadership roles, especially in high-growth and technology-driven
-        organizations where strategic thinking and execution quality are equally important.
+        This foundation directly informs how I approach every professional role: with a bias toward
+        execution, clarity about what actually moves outcomes, and the ability to operate effectively
+        in high-growth, ambiguous environments. Babson's emphasis on leadership through action —
+        not just planning — is evident in how I work across operations, strategy, and community.
       </p>
-      <p>
-        Official website:
-        <a class="text-link" href="https://www.babson.edu/" target="_blank" rel="noopener noreferrer">babson.edu</a>
-      </p>
-    </section>
+
+      <div class="detail-links">
+        <a class="btn btn-blue" href="https://www.babson.edu/" target="_blank" rel="noopener noreferrer">Visit Babson College ↗</a>
+        <a class="btn btn-ghost" href="index.html#education">← Back to Education</a>
+      </div>
+    </div>
   </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <a class="footer-brand" href="index.html">
+        <img src="crest.svg" alt="JWS" />
+        Johannes W. Simanjuntak
+      </a>
+      <p class="footer-copy">&copy; <span id="year"></span> Johannes W. Simanjuntak</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="https://www.linkedin.com/in/johannes-william-simanjuntak" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
-
